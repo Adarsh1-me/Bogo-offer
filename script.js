@@ -11,3 +11,11 @@ document.querySelectorAll('input[name="offer"]').forEach((input) => {
         }
     });
 });
+
+document.querySelectorAll('.offer-card').forEach(card => {
+    card.addEventListener('click', function () {
+        document.querySelectorAll('.offer-card').forEach(c => c.classList.remove('selected'));
+        this.classList.add('selected');
+        this.querySelector('input[type="radio"]').checked = true;
+    });
+});
